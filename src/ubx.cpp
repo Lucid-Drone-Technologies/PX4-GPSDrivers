@@ -537,7 +537,7 @@ int GPSDriverUBX::configureDevice(const GNSSSystemsMask &gnssSystems, const int3
 	int rate_meas;
 
 	if (_mode != UBXMode::Normal) {
-		rate_meas = 125; //8Hz for heading.
+		rate_meas = 200; //5Hz for heading as recommended by UBLOX
 
 	} else {
 		rate_meas = (_board == Board::u_blox9_F9P) ? 100 : 125;
