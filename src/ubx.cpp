@@ -562,7 +562,7 @@ int GPSDriverUBX::configureDevice(const GPSConfig &config, const int32_t uart2_b
 	int rate_meas;
 
 	if (_mode != UBXMode::Normal) {
-		rate_meas = 125; //8Hz for heading.
+		rate_meas = 200; //5Hz for heading as per the moving baseline appliction notes
 
 	} else {
 		rate_meas = (_board == Board::u_blox9_F9P) ? 100 : 125;

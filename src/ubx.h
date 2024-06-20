@@ -224,7 +224,12 @@
 #define UBX_TX_CFG_PRT_PROTO_UBX                (1<<0)
 #define UBX_TX_CFG_PRT_PROTO_RTCM               (1<<5)
 
-#define UBX_BAUDRATE_M8_AND_NEWER               115200 /**< baudrate for M8+ boards */
+/* This config was set to 115200 for M8+ boards
+ * According to the u-blox F9P moving baseline application notes
+ * the baudrate should be set to 460800 for best performance
+ * ToDo: change the logic of the code to set the baudrate to 460800 when using MBL with F9P and 115200 for M8+ boards)
+*/
+#define UBX_BAUDRATE_M8_AND_NEWER               460800 /**< baudrate for M8+ boards */
 
 /* TX CFG-RATE message contents
  * Note: not used with protocol version 27+ anymore
