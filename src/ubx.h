@@ -229,7 +229,7 @@
  * the baudrate should be set to 460800 for best performance
  * ToDo: change the logic of the code to set the baudrate to 460800 when using MBL with F9P and 115200 for M8+ boards)
 */
-#define UBX_BAUDRATE_M8_AND_NEWER               460800 /**< baudrate for M8+ boards */
+#define UBX_BAUDRATE_M8_AND_NEWER               115200 /**< baudrate for M8+ boards */
 
 /* TX CFG-RATE message contents
  * Note: not used with protocol version 27+ anymore
